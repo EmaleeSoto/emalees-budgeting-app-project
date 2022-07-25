@@ -1,5 +1,12 @@
-import React from "react";
+import Purchases from "../Components/Purchases";
 
-export default function Index() {
-  return <div>Index</div>;
+function Index() {
+  return (
+    <div>
+      <h2>Index</h2>
+      <Purchases />
+    </div>
+  );
 }
+
+export default Index;
