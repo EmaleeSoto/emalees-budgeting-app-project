@@ -20,7 +20,16 @@ export default function PurchaseDetails() {
       });
   }, [index, navigate]);
 
-  const handleDelete = () => {};
+  const handleDelete = () => {
+    axios
+      .delete(`${API}/purchases/${index}`)
+      .then(() => {
+        navigate("/purchases");
+      })
+      .catch((err) => {
+        console.warn(err);
+      });
+  };
 
   return (
     <div>
