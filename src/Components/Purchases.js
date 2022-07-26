@@ -17,16 +17,20 @@ export default function Purchases() {
       });
   }, []);
 
+  let total = 0;
+
   return (
     <div>
       <h3>Purchase History</h3>
       <table>
         <tbody>
           {purchases.map((purchase, index) => {
+            total += parseInt(purchase.amount);
             return <Purchase key={index} purchase={purchase} index={index} />;
           })}
         </tbody>
       </table>
+      <p>{`Total: ${total}`}</p>
     </div>
   );
 }
