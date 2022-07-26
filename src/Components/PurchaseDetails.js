@@ -24,12 +24,12 @@ export default function PurchaseDetails() {
 
   return (
     <div>
-      <h4>{`"${purchase.item_name}" Charge --- Type: ${purchase.category}`}</h4>
+      <h4>{`"${purchase.name}" Charge --- Type: ${purchase.category}`}</h4>
       <p>{`Amount Paid: ${purchase.amount}`}</p>
       <p>{`Charged by "${purchase.from}" on ${purchase.date}`}</p>
       <button
         onClick={handleDelete}
-      >{`Delete ${purchase.item_name} from History`}</button>
+      >{`Delete ${purchase.name} from History`}</button>
     </div>
   );
 }

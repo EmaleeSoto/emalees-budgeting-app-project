@@ -6,7 +6,7 @@ export default function Purchase({ purchase, index }) {
     <tr>
       <td>{purchase.date}</td>
       <td>
-        <Link to={`/purchases/${index}`}>{purchase.item_name}</Link>
+        <Link to={`/purchases/${index}`}>{purchase.name}</Link>
       </td>
       <td>{purchase.amount}</td>
     </tr>
