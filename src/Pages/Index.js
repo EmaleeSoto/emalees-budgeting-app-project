@@ -1,10 +1,10 @@
-import Purchases from "../Components/Purchases";
+import Transactions from "../Components/Transactions";
 
 function Index() {
   return (
     <div>
       <h2>Index</h2>
-      <Purchases />
+      <Transactions />
     </div>
   );
 }

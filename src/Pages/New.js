@@ -1,11 +1,11 @@
-import NewForm from "../Components/NewForm";
 import React from "react";
+import TransactionNewForm from "../Components/TransactionNewForm";
 
 export default function New() {
   return (
     <div>
       <h1>Add a Purchase</h1>
-      <NewForm />
+      <TransactionNewForm />
     </div>
   );
 }

@@ -4,8 +4,8 @@ import React from "react";
 export default function () {
   return (
     <div>
-      <Link to="/purchases">Purchase History</Link>
-      <Link to="/purchases/newpurchase">New Transaction</Link>
+      <Link to="/transactions">Transaction History</Link>
+      <Link to="/transactions/new">New Transaction</Link>
     </div>
   );
 }

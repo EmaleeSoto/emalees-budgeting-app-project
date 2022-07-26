@@ -4,9 +4,9 @@ import axios from "axios";
 import React from "react";
 const API = process.env.REACT_APP_API_URL;
 
-export default function () {
+export default function TransactionNewForm() {
   const navigate = useNavigate();
-  const [purchase, setPurchase] = useState({
+  const [transaction, setTransaction] = useState({
     name: "",
     amount: 0,
     date: "",
@@ -15,8 +15,8 @@ export default function () {
   });
 
   const handleTextChange = (event) => {
-    setPurchase({
-      ...purchase,
+    setTransaction({
+      ...transaction,
       [event.target.id.toLowerCase()]: event.target.value,
     });
   };
@@ -24,9 +24,9 @@ export default function () {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post(`${API}/purchases`, purchase)
+      .post(`${API}/transactions`, transaction)
       .then(() => {
-        navigate("/purchases");
+        navigate("/transactions");
       })
       .catch((err) => {
         console.warn(err);
