@@ -27,7 +27,7 @@ export default function Transactions() {
       .catch((err) => {
         console.warn(err);
       });
-  }, [transactions]);
+  }, [API]);
 
   const totalFormatter = (total) => {
     return total >= 0 ? `$${total}` : `-$${Math.abs(total)}`;
