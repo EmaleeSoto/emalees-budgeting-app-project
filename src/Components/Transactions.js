@@ -2,11 +2,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Transaction from "./Transaction.js";
 import React from "react";
-import Total from "./Total.js";
 
 export default function Transactions() {
   const [transactions, setTransactions] = useState([]);
-  //const [total, setTotal] = useState(0);
   const API = process.env.REACT_APP_API_URL;
 
   const checkTotal = (total) => {
@@ -29,10 +27,7 @@ export default function Transactions() {
       .catch((err) => {
         console.warn(err);
       });
-  }, []);
-  {
-    console.log(total);
-  }
+  });
 
   const totalFormatter = (total) => {
     return total >= 0 ? `$${total}` : `-$${Math.abs(total)}`;

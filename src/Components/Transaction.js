@@ -18,17 +18,6 @@ export default function Transaction({ transaction, index, totalFormatter }) {
       });
   };
 
-  const handleEdit = (event) => {
-    event.preventDefault();
-    axios
-      .put(`${API}/transactions/${index}`, transaction)
-      .then(() => {
-        navigate(`/transactions/${index}`);
-      })
-      .catch((err) => {
-        console.warn(err);
-      });
-  };
   return (
     <tr>
       <td className="table-info">{transaction.date}</td>

@@ -31,17 +31,6 @@ export default function TransactionDetails() {
       });
   };
 
-  const handleEdit = (event) => {
-    axios
-      .get(`${API}/transactions/${index}`)
-      .then((res) => {
-        setTransaction(res.data);
-      })
-      .catch((err) => {
-        console.warn(err);
-      });
-  };
-
   return (
     <div>
       <h4>{`"${transaction.name}" Charge --- Type: ${transaction.category}`}</h4>
