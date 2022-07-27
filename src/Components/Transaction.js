@@ -11,7 +11,8 @@ export default function Transaction({ transaction, index, totalFormatter }) {
     axios
       .delete(`${API}/transactions/${index}`)
       .then(() => {
-        navigate("/transactions");
+        // navigate("/transactions");
+        window.location.reload();
       })
       .catch((err) => {
         console.warn(err);
@@ -21,20 +22,20 @@ export default function Transaction({ transaction, index, totalFormatter }) {
   return (
     <tr>
       <td className="table-info">{transaction.date}</td>
-      <td className="table-info">
+      <td className="table-info" id="transaction-name">
         <Link to={`/transactions/${index}`}>{transaction.name}</Link>
       </td>
-      <td className="table-info">{totalFormatter(transaction.amount)}</td>
-      <td>
-        <Link to={`/transactions/${index}/edit`}>
-          <button className="edit-button">Edit Transaction</button>
-        </Link>
+      <td className="table-info">
+        <p id={Math.sign(transaction.amount) >= 0 ? "positive" : "negative"}>
+          {totalFormatter(transaction.amount)}{" "}
+        </p>
       </td>
+      <td></td>
       <td>
         <form>
-          <button className="delete-button" onClick={handleDelete}>
+          {/* <button className="delete-button" onClick={handleDelete}>
             Delete Transaction
-          </button>
+          </button> */}
         </form>
       </td>
     </tr>

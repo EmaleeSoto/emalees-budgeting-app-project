@@ -15,6 +15,10 @@
   padding: 20px;
 }
 
+div a {
+  color: #357782;
+}
+
 table {
   border-collapse: collapse;
 }
@@ -49,16 +53,6 @@ table {
   cursor: pointer;
 }
 
-/* #delete-button {
-  transition: all .5s ease;
-  background-color: #5EA67C;
-  color: white;
-  border: 1px solid;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 20px;
-} */
-
 .delete-button:hover {
   color: #D0B4A9;
   background-color: red;
@@ -68,6 +62,23 @@ table {
 .table {
   margin-left: auto;
   margin-right: auto;
+  width: 2fr;
+}
+
+#transaction-name {
+  width: 500px;
+}
+
+.details {
+  padding: 20px;
+}
+
+#positive {
+  color: green;
+}
+
+#negative {
+  color: red;
 }
 
 .green {

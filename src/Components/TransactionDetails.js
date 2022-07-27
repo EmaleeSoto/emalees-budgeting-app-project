@@ -32,7 +32,7 @@ export default function TransactionDetails({ totalFormatter }) {
   };
 
   return (
-    <div>
+    <div className="details">
       <h4>{`Transaction for "${transaction.name}" -- ${transaction.category}`}</h4>
       <p>{`Amount Paid: ${totalFormatter(transaction.amount)}`}</p>
       <p>{`Charged by "${transaction.from}" on ${transaction.date}`}</p>
