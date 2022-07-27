@@ -8,14 +8,24 @@ import Edit from "./Pages/Edit";
 import "./App.css";
 
 function App() {
+  const totalFormatter = (total) => {
+    return total >= 0 ? `$${total}` : `-$${Math.abs(total)}`;
+  };
+
   return (
     <div className="App">
       <Router>
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/transactions" element={<Index />} />
-          <Route path="/transactions/:index" element={<Show />} />
+          <Route
+            path="/transactions"
+            element={<Index totalFormatter={totalFormatter} />}
+          />
+          <Route
+            path="/transactions/:index"
+            element={<Show totalFormatter={totalFormatter} />}
+          />
           <Route path="/transactions/new" element={<New />} />
           <Route path="/transactions/:index/edit" element={<Edit />} />
         </Routes>

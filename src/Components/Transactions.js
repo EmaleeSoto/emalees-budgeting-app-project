@@ -3,7 +3,7 @@ import axios from "axios";
 import Transaction from "./Transaction.js";
 import React from "react";
 
-export default function Transactions() {
+export default function Transactions({ totalFormatter }) {
   const [transactions, setTransactions] = useState([]);
   const API = process.env.REACT_APP_API_URL;
 
@@ -29,9 +29,6 @@ export default function Transactions() {
       });
   }, []);
 
-  const totalFormatter = (total) => {
-    return total >= 0 ? `$${total}` : `-$${Math.abs(total)}`;
-  };
   return (
     <div>
       <h3>Transaction History</h3>

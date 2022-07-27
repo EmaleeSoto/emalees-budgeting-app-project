@@ -27,12 +27,12 @@ export default function Transaction({ transaction, index, totalFormatter }) {
       <td className="table-info">{totalFormatter(transaction.amount)}</td>
       <td>
         <Link to={`/transactions/${index}/edit`}>
-          <button id="edit-button">Edit Transaction</button>
+          <button className="edit-button">Edit Transaction</button>
         </Link>
       </td>
       <td>
         <form>
-          <button id="delete-button" onClick={handleDelete}>
+          <button className="delete-button" onClick={handleDelete}>
             Delete Transaction
           </button>
         </form>

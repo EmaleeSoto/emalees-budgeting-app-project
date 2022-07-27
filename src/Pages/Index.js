@@ -1,10 +1,10 @@
 import Transactions from "../Components/Transactions";
 
-function Index() {
+function Index({ totalFormatter }) {
   return (
     <div>
       <h2>Index</h2>
-      <Transactions />
+      <Transactions totalFormatter={totalFormatter} />
     </div>
   );
 }

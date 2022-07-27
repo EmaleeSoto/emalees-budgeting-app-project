@@ -32,7 +32,7 @@ table {
   grid-column: 4;
 } 
 
-#edit-button, #delete-button {
+.edit-button, .delete-button {
   transition: all .5s ease;
   /* background-color: #7DA1D0; */
   background-color: #5EA67C;
@@ -43,7 +43,7 @@ table {
   border-radius: 20px;
 }
 
-#edit-button:hover {
+.edit-button:hover {
   color: green;
   background-color: white;
   cursor: pointer;
@@ -59,7 +59,7 @@ table {
   border-radius: 20px;
 } */
 
-#delete-button:hover {
+.delete-button:hover {
   color: #D0B4A9;
   background-color: red;
   cursor: pointer;
