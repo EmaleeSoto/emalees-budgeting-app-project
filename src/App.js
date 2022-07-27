@@ -23,6 +23,10 @@ function App() {
             element={<Index totalFormatter={totalFormatter} />}
           />
           <Route
+            path="/transactions?"
+            element={<Index totalFormatter={totalFormatter} />}
+          />
+          <Route
             path="/transactions/:index"
             element={<Show totalFormatter={totalFormatter} />}
           />
