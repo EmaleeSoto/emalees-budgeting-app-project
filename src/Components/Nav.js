@@ -3,9 +3,13 @@ import React from "react";
 
 export default function () {
   return (
-    <div>
-      <Link to="/transactions">Transaction History</Link>
-      <Link to="/transactions/new">New Transaction</Link>
+    <div className="nav">
+      <Link to="/transactions" id="history">
+        Transaction History
+      </Link>
+      <Link to="/transactions/new" id="new">
+        New Transaction
+      </Link>
     </div>
   );
 }

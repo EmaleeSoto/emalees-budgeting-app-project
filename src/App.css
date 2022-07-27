@@ -1,13 +1,92 @@
 .App {
   text-align: center;
+  color: #4C8D9C;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: #5DAAB4;
+  height: auto;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.table-info {
+  border: 1px solid;
+  padding: 10px;
+}
+
+#history { 
+  grid-column: 3;
+}
+
+#new {
+  grid-column: 4;
+} 
+
+#edit-button, #delete-button {
+  transition: all .5s ease;
+  /* background-color: #7DA1D0; */
+  background-color: #5EA67C;
+  color: white;
+  border: 1px solid;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#edit-button:hover {
+  color: green;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* #delete-button {
+  transition: all .5s ease;
+  background-color: #5EA67C;
+  color: white;
+  border: 1px solid;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+} */
+
+#delete-button:hover {
+  color: #D0B4A9;
+  background-color: red;
+  cursor: pointer;
+}
+
+.table {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .green {
   color: green;
+  position: absolute;
+  top: 0;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 .yellow {
   color: #E0CE45;
+  position: absolute;
+  top: 0;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 .red{
-  color:red
+  color:red;
+  position: absolute;
+  top: 0;
+  margin-left: 20px;
 }

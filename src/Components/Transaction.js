@@ -4,7 +4,7 @@ import React from "react";
 import axios from "axios";
 const API = process.env.REACT_APP_API_URL;
 
-export default function Transaction({ transaction, index }) {
+export default function Transaction({ transaction, index, totalFormatter }) {
   const navigate = useNavigate();
 
   const handleDelete = (event) => {
@@ -31,19 +31,21 @@ export default function Transaction({ transaction, index }) {
   };
   return (
     <tr>
-      <td>{transaction.date}</td>
-      <td>
+      <td className="table-info">{transaction.date}</td>
+      <td className="table-info">
         <Link to={`/transactions/${index}`}>{transaction.name}</Link>
       </td>
-      <td>{`$${transaction.amount}`}</td>
+      <td className="table-info">{totalFormatter(transaction.amount)}</td>
       <td>
         <Link to={`/transactions/${index}/edit`}>
-          <button>Edit Transaction</button>
+          <button id="edit-button">Edit Transaction</button>
         </Link>
       </td>
       <td>
         <form>
-          <button onClick={handleDelete}>Delete Transaction</button>
+          <button id="delete-button" onClick={handleDelete}>
+            Delete Transaction
+          </button>
         </form>
       </td>
     </tr>

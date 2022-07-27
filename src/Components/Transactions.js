@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Transaction from "./Transaction.js";
 import React from "react";
+import Total from "./Total.js";
 
 export default function Transactions() {
   const [transactions, setTransactions] = useState([]);
+  //const [total, setTotal] = useState(0);
   const API = process.env.REACT_APP_API_URL;
-
-  let total = 0;
 
   const checkTotal = (total) => {
     if (total >= 1000) {
@@ -17,6 +17,8 @@ export default function Transactions() {
     }
     return "red";
   };
+
+  let total = 0;
 
   useEffect(() => {
     axios
@@ -28,12 +30,18 @@ export default function Transactions() {
         console.warn(err);
       });
   }, []);
+  {
+    console.log(total);
+  }
 
+  const totalFormatter = (total) => {
+    return total >= 0 ? `$${total}` : `-$${Math.abs(total)}`;
+  };
   return (
     <div>
-      <h3>transaction History</h3>
-      <p className={checkTotal(total)}>{`Total: ${total}`}</p>
-      <table>
+      <h3>Transaction History</h3>
+
+      <table className="table">
         <tbody>
           {transactions.map((transaction, index) => {
             total += parseInt(transaction.amount);
@@ -42,11 +50,15 @@ export default function Transactions() {
                 key={index}
                 transaction={transaction}
                 index={index}
+                totalFormatter={totalFormatter}
               />
             );
           })}
         </tbody>
       </table>
+      <h2 className={checkTotal(total)}>{`Current Balance: ${totalFormatter(
+        total
+      )}`}</h2>
     </div>
   );
 }
