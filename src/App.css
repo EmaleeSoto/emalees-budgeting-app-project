@@ -3,10 +3,18 @@
   color: #4C8D9C;
 }
 
-img {
-  padding-top: 5px;
-  width: 50px;
-  height: 50px;
+#nav-image {
+  padding: 10px;
+  width: 200px;
+  height: 80px;
+}
+
+#left {
+  float: left;
+}
+
+#right {
+  float: right;
 }
 
 .nav {
@@ -15,10 +23,35 @@ img {
   background-color: #5DAAB4;
   height: auto;
 }
+
 #history, #new {
   color: white;
   text-decoration: none;
   padding: 20px;
+  margin-top: 20px;
+}
+
+#quickpocket {
+  color: #D68D41;
+}
+
+#anytime {
+  color: #7DC99C;
+}
+
+#anywhere {
+  color: #9C2B60;
+}
+
+.home-phrase {
+  color: #2747C0;
+  margin-top: 5em;
+  margin-left: 30px;
+}
+
+.home-image {
+  margin-top: 70px;
+  margin-right: 100px;
 }
 
 div a {
@@ -119,8 +152,39 @@ button, .clear-history-button, .final-submit {
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 409px) {
   .index-edit-button, .index-delete-button {
     display: none;
+  }
+  .home-image {
+display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  #nav-image {
+    display: none;
+  }
+  .home-image {
+    max-height: 200px;
+    max-width: 300px;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-image {
+    height: 400px;
+    width: 500px;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 1310px) {
+  #left, #right {
+    float: none;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }

@@ -6,7 +6,8 @@ export default function Nav() {
     <div className="nav">
       <Link to="/">
         <img
-          src="https://www.vhv.rs/dpng/d/411-4112576_coffee-cup-png-steaming-cup-of-coffee-clipart.png"
+          id="nav-image"
+          src="https://www.pngall.com/wp-content/uploads/4/Running-Transparent-Image.png"
           alt="piggy"
         />
       </Link>
