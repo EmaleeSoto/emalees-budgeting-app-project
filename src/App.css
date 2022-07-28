@@ -50,7 +50,7 @@ input {
   grid-column: 4;
 } 
 
-button {
+button, .clear-history-button, .final-submit {
   transition: all .5s ease;
   background-color: #5EA67C;
   color: white;
@@ -73,7 +73,7 @@ button {
   cursor: pointer;
 }
 
-.clear-history-button:hover {
+.clear-history-button:hover, .final-submit:hover, .back-button:hover {
   color: white;
   background-color: #285296;
   cursor: pointer;

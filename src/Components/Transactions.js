@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Transaction from "./Transaction.js";
 import React from "react";
@@ -76,17 +75,14 @@ export default function Transactions({ totalFormatter }) {
           })}
         </tbody>
       </table>
-      {/* <button
-        className={
-          transactions.length > 0 ? "clear-history-button" : "none-display"
-        }
-        onClick={() => clearHistory(transactions)}
-      >
-        Clear History
-      </button> */}
-
       <form onSubmit={() => clearHistory(transactions)}>
-        <input type="submit" value="Clear History" />
+        <input
+          className={
+            transactions.length > 0 ? "clear-history-button" : "none-display"
+          }
+          type="submit"
+          value="Clear History"
+        />
       </form>
     </div>
   );

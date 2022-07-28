@@ -50,7 +50,7 @@ export default function TransactionNewForm() {
         <label htmlFor="category">Category</label>
         <input type="text" id="category" onChange={handleTextChange} />
         <br></br>
-        <input type="submit" />
+        <input className="final-submit" type="submit" />
       </form>
     </div>
   );

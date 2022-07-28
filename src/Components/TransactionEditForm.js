@@ -83,7 +83,7 @@ export default function TransactionEditForm() {
           value={transaction.category}
         />
         <br></br>
-        <input type="submit" />
+        <input className="final-submit" type="submit" />
       </form>
     </div>
   );

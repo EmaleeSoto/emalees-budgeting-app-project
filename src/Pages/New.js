@@ -1,4 +1,3 @@
-import React from "react";
 import TransactionNewForm from "../Components/TransactionNewForm";
 
 export default function New() {

@@ -21,7 +21,7 @@ export default function Transaction({ transaction, index, totalFormatter }) {
   return (
     <tr>
       <Link to={`/transactions/${index}/edit`}>
-        <button className="edit-button">Edit Transaction</button>
+        <button className="index-edit-button">Edit Transaction</button>
       </Link>
       <td className="table-info">{transaction.date}</td>
       <td className="table-info" id="transaction-name">
@@ -33,7 +33,7 @@ export default function Transaction({ transaction, index, totalFormatter }) {
         </p>
       </td>
       <td>
-        <button className="delete-button" onClick={handleDelete}>
+        <button className="index-delete-button" onClick={handleDelete}>
           Delete Transaction
         </button>
       </td>
