@@ -5,6 +5,7 @@ import Index from "./Pages/Index";
 import New from "./Pages/New.js";
 import Show from "./Pages/Show";
 import Edit from "./Pages/Edit";
+import FourOFour from "./Pages/FourOFour";
 import "./App.css";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           />
           <Route path="/transactions/new" element={<New />} />
           <Route path="/transactions/:index/edit" element={<Edit />} />
+          <Route path="*" element={<FourOFour />} />
         </Routes>
       </Router>
     </div>

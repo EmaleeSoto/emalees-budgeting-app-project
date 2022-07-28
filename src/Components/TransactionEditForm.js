@@ -50,6 +50,7 @@ export default function TransactionEditForm() {
           onChange={handleTextChange}
           value={transaction.name}
         />
+        <br></br>
         <label htmlFor="amount">Amount</label>
         <input
           type="number"
@@ -57,6 +58,7 @@ export default function TransactionEditForm() {
           onChange={handleTextChange}
           value={transaction.amount}
         />
+        <br></br>
         <label htmlFor="date">Date</label>
         <input
           type="text"
@@ -64,6 +66,7 @@ export default function TransactionEditForm() {
           onChange={handleTextChange}
           value={transaction.date}
         />
+        <br></br>
         <label htmlFor="from">From</label>
         <input
           type="text"
@@ -71,6 +74,7 @@ export default function TransactionEditForm() {
           onChange={handleTextChange}
           value={transaction.from}
         />
+        <br></br>
         <label htmlFor="category">Category</label>
         <input
           type="text"
@@ -78,6 +82,7 @@ export default function TransactionEditForm() {
           onChange={handleTextChange}
           value={transaction.category}
         />
+        <br></br>
         <input type="submit" />
       </form>
     </div>

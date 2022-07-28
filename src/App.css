@@ -3,13 +3,19 @@
   color: #4C8D9C;
 }
 
+img {
+  padding-top: 5px;
+  width: 50px;
+  height: 50px;
+}
+
 .nav {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   background-color: #5DAAB4;
   height: auto;
 }
-.nav a {
+#history, #new {
   color: white;
   text-decoration: none;
   padding: 20px;
@@ -28,6 +34,14 @@ table {
   padding: 10px;
 }
 
+label {
+  padding: 10px;
+}
+
+input {
+  margin: 10px
+}
+
 #history { 
   grid-column: 3;
 }
@@ -36,26 +50,32 @@ table {
   grid-column: 4;
 } 
 
-.edit-button, .delete-button {
+button {
   transition: all .5s ease;
-  /* background-color: #7DA1D0; */
   background-color: #5EA67C;
   color: white;
   border: 1px solid;
   margin: 5px;
   padding: 10px;
   border-radius: 20px;
+  width:max-content;
 }
 
-.edit-button:hover {
+.index-edit-button:hover, .show-edit-button:hover {
   color: green;
   background-color: white;
   cursor: pointer;
 }
 
-.delete-button:hover {
-  color: #D0B4A9;
+.index-delete-button:hover, .show-delete-button:hover {
+  color: white;
   background-color: red;
+  cursor: pointer;
+}
+
+.clear-history-button:hover {
+  color: white;
+  background-color: #285296;
   cursor: pointer;
 }
 
@@ -71,6 +91,7 @@ table {
 
 .details {
   padding: 20px;
+  word-wrap: break-word;
 }
 
 #positive {
@@ -81,23 +102,25 @@ table {
   color: red;
 }
 
+.none-display {
+  display: none;
+}
+
 .green {
   color: green;
-  position: absolute;
-  top: 0;
-  margin-left: 20px;
-  margin-top: 20px;
+
 }
 .yellow {
   color: #E0CE45;
-  position: absolute;
-  top: 0;
-  margin-left: 20px;
-  margin-top: 20px;
+
 }
 .red{
   color:red;
-  position: absolute;
-  top: 0;
-  margin-left: 20px;
+
+}
+
+@media (max-width: 400px) {
+  .index-edit-button, .index-delete-button {
+    display: none;
+  }
 }

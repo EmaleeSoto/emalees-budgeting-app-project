@@ -37,14 +37,19 @@ export default function TransactionNewForm() {
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
         <input type="text" id="name" onChange={handleTextChange} />
+        <br></br>
         <label htmlFor="amount">Amount</label>
         <input type="number" id="amount" onChange={handleTextChange} />
+        <br></br>
         <label htmlFor="date">Date</label>
         <input type="text" id="date" onChange={handleTextChange} />
+        <br></br>
         <label htmlFor="from">From</label>
         <input type="text" id="from" onChange={handleTextChange} />
+        <br></br>
         <label htmlFor="category">Category</label>
         <input type="text" id="category" onChange={handleTextChange} />
+        <br></br>
         <input type="submit" />
       </form>
     </div>

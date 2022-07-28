@@ -3,7 +3,7 @@ import Transactions from "../Components/Transactions";
 function Index({ totalFormatter }) {
   return (
     <div>
-      <h2>Index</h2>
+      <h2 className="title">Transaction History</h2>
       <Transactions totalFormatter={totalFormatter} />
     </div>
   );

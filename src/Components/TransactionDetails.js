@@ -21,6 +21,7 @@ export default function TransactionDetails({ totalFormatter }) {
   }, [index, navigate]);
 
   const handleDelete = () => {
+    alert("Are you sure you want to delete this item?");
     axios
       .delete(`${API}/transactions/${index}`)
       .then(() => {
@@ -34,13 +35,16 @@ export default function TransactionDetails({ totalFormatter }) {
   return (
     <div className="details">
       <h4>{`Transaction for "${transaction.name}" -- ${transaction.category}`}</h4>
-      <p>{`Amount Paid: ${totalFormatter(transaction.amount)}`}</p>
+      <p>{`Amount Processed: ${totalFormatter(transaction.amount)}`}</p>
       <p>{`Charged by "${transaction.from}" on ${transaction.date}`}</p>
+      <Link to={`/transactions`}>
+        <button className="back-button">{"Back"}</button>
+      </Link>
       <Link to={`/transactions/${index}/edit`}>
-        <button className="edit-button">{`Edit ${transaction.name}`}</button>
+        <button className="show-edit-button">Edit Transaction</button>
       </Link>
       <button
-        className="delete-button"
+        className="show-delete-button"
         onClick={handleDelete}
       >{`Delete ${transaction.name} from History`}</button>
     </div>
